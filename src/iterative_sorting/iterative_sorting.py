@@ -32,7 +32,7 @@ a. Loop through elements on right-hand-side of current index and find the smalle
 b. Swap the element at current index with the smallest element found in above loop
 """
 
-
+"""
 test = [ 4, 3, 1, 2, 5, 6 ]
 
 def selection_sort( arr ):
@@ -47,7 +47,7 @@ def selection_sort( arr ):
     print(arr)
 
 selection_sort(test)
-
+"""
 
 # TO-DO:  implement the Bubble Sort function below
  # If `elements` is a collection, remember it will be passed by reference, not value
@@ -62,15 +62,16 @@ selection_sort(test)
 
 test1 = [ 4, 3, 1, 2, 5, 6 ]
 
-def bubble_sort(list):
-    for i in range(0, len(list) - 1):
-        j = i + 1
-        count = 0
-        while count > 0:
-            if list[i + 1] < list[i]:
-                list[i], list[j] = list[j], list[i]
-                count += 1
-    return list
+def bubble_sort(arr):
+    swapped = True
+    while swapped:
+        swapped = False
+        for i in range(0, len(arr)-1):
+            if(arr[i+1] < arr[i]):
+                arr[i+1], arr[i] = arr[i], arr[i+1]
+                swapped = True
+    print(arr)
+    return arr
 
 bubble_sort(test1)
 
