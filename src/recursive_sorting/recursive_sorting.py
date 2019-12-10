@@ -1,4 +1,26 @@
-# TO-DO: complete the helpe function below to merge 2 sorted arrays
+## FROM GUIDED PROJECT: QUICKSORT
+def partition(data):
+    left = []
+    pivot = data[0]
+    right = []
+
+    for v in data[1:]:
+        if v <= pivot:
+            left.append(v)
+        else:
+            right.append(v)
+    
+    return left, [pivot], right
+
+def quicksort(data)
+    if len(data) <= 1:
+        return data
+    left, pivot, right = partition(data)
+    return quicksort(left) + pivot + quicksort(right)
+    #return concatenation
+
+
+# TO-DO: complete the helper function below to merge 2 sorted arrays
 def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
